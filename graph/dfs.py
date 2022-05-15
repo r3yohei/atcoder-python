@@ -18,10 +18,10 @@ for i in range(m):
 # n: 頂点数
 # edges: 頂点と辺の隣接リスト表現
 visited = [False] * n
-def dfs(x):
+def dfs(frm):
     # xに訪問できるので書き換える
-    visited[x] = True
+    visited[frm] = True
     # xから行ける頂点のうち，未訪問のものへ行く
-    for to in edges[x]:
+    for to in edges[frm]:
         if not visited[to]:
             dfs(to)
